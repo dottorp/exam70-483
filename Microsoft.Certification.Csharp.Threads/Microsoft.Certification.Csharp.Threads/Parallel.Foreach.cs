@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Linq;
+using System.Threading.Tasks;
 
 namespace Microsoft.Certification.Csharp.Threads
 {
@@ -6,7 +7,8 @@ namespace Microsoft.Certification.Csharp.Threads
     {
         public override void Execute()
         {
-            throw new NotImplementedException();
+            var items = Enumerable.Range(0, 500);
+            Parallel.ForEach(items, item => { ProcessItem(item); });
         }
     }
 }
