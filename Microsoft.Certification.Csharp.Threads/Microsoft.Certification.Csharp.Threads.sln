@@ -4,7 +4,7 @@ VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Certification.Csharp.Threads", "Microsoft.Certification.Csharp.Threads\Microsoft.Certification.Csharp.Threads.csproj", "{E4EAE8B1-B6C7-424F-A46D-1398E084A77F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Certification.Csharp.Threads.Test", "Microsoft.Certification.Csharp.Threads.Test\Microsoft.Certification.Csharp.Threads.Test.csproj", "{70ADCE87-153A-4C33-A6D7-DF55BC3F7080}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Certification.Csharp.Threads.Test", "Microsoft.Certification.Csharp.Threads.Test\Microsoft.Certification.Csharp.Threads.Test.csproj", "{70ADCE87-153A-4C33-A6D7-DF55BC3F7080}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BF3F6A41-941C-4FC9-82C5-B76701854216}"
 	ProjectSection(SolutionItems) = preProject
@@ -19,12 +19,14 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E4EAE8B1-B6C7-424F-A46D-1398E084A77F}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{E4EAE8B1-B6C7-424F-A46D-1398E084A77F}.Debug|x86.ActiveCfg = Debug|x86
-		{E4EAE8B1-B6C7-424F-A46D-1398E084A77F}.Debug|x86.Build.0 = Debug|x86
-		{E4EAE8B1-B6C7-424F-A46D-1398E084A77F}.Release|Any CPU.ActiveCfg = Release|x86
-		{E4EAE8B1-B6C7-424F-A46D-1398E084A77F}.Release|x86.ActiveCfg = Release|x86
-		{E4EAE8B1-B6C7-424F-A46D-1398E084A77F}.Release|x86.Build.0 = Release|x86
+		{E4EAE8B1-B6C7-424F-A46D-1398E084A77F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4EAE8B1-B6C7-424F-A46D-1398E084A77F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4EAE8B1-B6C7-424F-A46D-1398E084A77F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E4EAE8B1-B6C7-424F-A46D-1398E084A77F}.Debug|x86.Build.0 = Debug|Any CPU
+		{E4EAE8B1-B6C7-424F-A46D-1398E084A77F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4EAE8B1-B6C7-424F-A46D-1398E084A77F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4EAE8B1-B6C7-424F-A46D-1398E084A77F}.Release|x86.ActiveCfg = Release|Any CPU
+		{E4EAE8B1-B6C7-424F-A46D-1398E084A77F}.Release|x86.Build.0 = Release|Any CPU
 		{70ADCE87-153A-4C33-A6D7-DF55BC3F7080}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{70ADCE87-153A-4C33-A6D7-DF55BC3F7080}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70ADCE87-153A-4C33-A6D7-DF55BC3F7080}.Debug|x86.ActiveCfg = Debug|Any CPU

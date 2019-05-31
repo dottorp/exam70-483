@@ -70,3 +70,7 @@ Can be used to parallelize the execution of a for loop, which is governed by a c
 The lambda expression that executes each iteration of the loop can be provided 
 with an additional parameter of type `ParallelLoopState` that allows the code being
 iterared to control the iteration process.
+
+Iterations can be stopped by calling `Stop` or `Break` method on the `ParallelLoopState` variable.
++ `Stop`
++ `Break`
