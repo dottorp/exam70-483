@@ -72,5 +72,21 @@ with an additional parameter of type `ParallelLoopState` that allows the code be
 iterared to control the iteration process.
 
 Iterations can be stopped by calling `Stop` or `Break` method on the `ParallelLoopState` variable.
-+ `Stop`
-+ `Break`
++ `Stop`: requests the loop to be stopped at System's earliest convenience. Stop will 
+ prevent any new iteration with an index value greater than the current index.
++ `Break`: all iterations with an index lower than current index are guaranteed to be completed. 
+ No iteations with index greater than current will be started after the call to `Break`
+
+`Stop()` is "smoother" than `Break()`.
+
+# Parallel LINQ
+PLINQ can be used to allow elements of a query to execute in parallel.
+
+The `AsParallel()` method examines the query 
+to determine if using a parallel version would speed it up. If it can't decide whether parallelization would 
+improve performance the query is not executed in parallel. If you really want to use `AsParallel` you should
+design the behavior with this in mind, otherwise performance may not be improved and it is possible that 
+you might get the wrong outputs.
+
+## Informing parallelization
+Programs can use other method calls to further inform the parallelization process.
