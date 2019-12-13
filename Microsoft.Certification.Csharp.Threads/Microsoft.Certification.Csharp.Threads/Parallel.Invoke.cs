@@ -1,37 +1,67 @@
 ﻿using System;
-using System.Threading;
+using System.Net;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace Microsoft.Certification.Csharp.Threads
 {
     public class Parallel_Invoke:ApplicationBase
     {
-        private static Action[] tasks;
+        public override void Execute()
+        {
+            Console.WriteLine("START");
+            Parallel.Invoke(() => Task1(), () => Task2(), () => Task3(), () => Task4(), () => Task5(), () => Task6(), () => Task7());
+            Console.WriteLine("END. Press any key to continue.");
+            Console.ReadKey();
+        }
+
         static void Task1()
         {
-            Console.WriteLine("Task 1 starting");
-            Thread.Sleep(2000);
-            Console.WriteLine("Task 1 ending");
+            DownloadString("https://docs.microsoft.com/it-it/dotnet/api/system.net.webclient.downloadstring?view=netframework-4.8");
+            Console.WriteLine($"{MethodBase.GetCurrentMethod().Name} completed");
         }
 
         static void Task2()
         {
-            Console.WriteLine("Task 2 starting");
-            Thread.Sleep(1000);
-            Console.WriteLine("Task 2 ending");
-        }       
-
-
-        public override void Execute()
-        {
-            tasks = new Action[2];
-            tasks[0] = Task1;
-            tasks[1] = Task2;
-            Parallel.Invoke(() => Task1(), () => Task2());
-            Console.WriteLine("===================");
-            Parallel.Invoke(tasks);
-            Console.WriteLine("Fine");
-            Console.ReadKey();
+            DownloadString("https://docs.microsoft.com/it-it/dotnet/api/system.net.webclient.downloadstring?view=netframework-4.8");
+            Console.WriteLine($"{MethodBase.GetCurrentMethod().Name} completed");
         }
+
+        static void Task3()
+        {
+            DownloadString("https://docs.microsoft.com/it-it/dotnet/api/system.net.webclient.downloadstring?view=netframework-4.8");
+            Console.WriteLine($"{MethodBase.GetCurrentMethod().Name} completed");
+        }
+
+        static void Task4()
+        {
+            DownloadString("https://docs.microsoft.com/it-it/dotnet/api/system.net.webclient.downloadstring?view=netframework-4.8");
+            Console.WriteLine($"{MethodBase.GetCurrentMethod().Name} completed");
+        }
+
+        static void Task5()
+        {
+            DownloadString("https://docs.microsoft.com/it-it/dotnet/api/system.net.webclient.downloadstring?view=netframework-4.8");
+            Console.WriteLine($"{MethodBase.GetCurrentMethod().Name} completed");
+        }
+
+        static void Task6()
+        {
+            DownloadString("https://docs.microsoft.com/it-it/dotnet/api/system.net.webclient.downloadstring?view=netframework-4.8");
+            Console.WriteLine($"{MethodBase.GetCurrentMethod().Name} completed");
+        }
+
+        static void Task7()
+        {
+            DownloadString("https://docs.microsoft.com/it-it/dotnet/api/system.net.webclient.downloadstring?view=netframework-4.8");
+            Console.WriteLine($"{MethodBase.GetCurrentMethod().Name} completed");
+        }
+
+        private static void DownloadString(string address)
+        {
+            WebClient client = new WebClient();
+            client.DownloadString(address);
+        }
+
     }
 }

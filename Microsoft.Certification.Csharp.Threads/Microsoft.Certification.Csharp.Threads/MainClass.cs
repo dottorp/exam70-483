@@ -6,7 +6,7 @@ namespace Microsoft.Certification.Csharp.Threads
     {
         public static void Main(string[] args)
         {
-            ApplicationBase app = new ManagingParallel();
+            ApplicationBase app = new Parallel_Invoke();
             app.Execute();
             Console.ReadKey();
         }
